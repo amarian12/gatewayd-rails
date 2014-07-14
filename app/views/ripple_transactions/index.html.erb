@@ -1,0 +1,49 @@
+<h1>Listing ripple_transactions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>To address</th>
+      <th>From address</th>
+      <th>To amount</th>
+      <th>From amount</th>
+      <th>To currency</th>
+      <th>From currency</th>
+      <th>To issuer</th>
+      <th>From issuer</th>
+      <th>Transaction state</th>
+      <th>Transaction hash</th>
+      <th>State</th>
+      <th>Uid</th>
+      <th>Data</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ripple_transactions.each do |ripple_transaction| %>
+      <tr>
+        <td><%= ripple_transaction.to_address %></td>
+        <td><%= ripple_transaction.from_address %></td>
+        <td><%= ripple_transaction.to_amount %></td>
+        <td><%= ripple_transaction.from_amount %></td>
+        <td><%= ripple_transaction.to_currency %></td>
+        <td><%= ripple_transaction.from_currency %></td>
+        <td><%= ripple_transaction.to_issuer %></td>
+        <td><%= ripple_transaction.from_issuer %></td>
+        <td><%= ripple_transaction.transaction_state %></td>
+        <td><%= ripple_transaction.transaction_hash %></td>
+        <td><%= ripple_transaction.state %></td>
+        <td><%= ripple_transaction.uid %></td>
+        <td><%= ripple_transaction.data %></td>
+        <td><%= link_to 'Show', ripple_transaction %></td>
+        <td><%= link_to 'Edit', edit_ripple_transaction_path(ripple_transaction) %></td>
+        <td><%= link_to 'Destroy', ripple_transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ripple transaction', new_ripple_transaction_path %>

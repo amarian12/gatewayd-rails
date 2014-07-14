@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Managed:</strong>
+  <%= @ripple_address.managed %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @ripple_address.address %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @ripple_address.type %>
+</p>
+
+<p>
+  <strong>Tag:</strong>
+  <%= @ripple_address.tag %>
+</p>
+
+<p>
+  <strong>Uid:</strong>
+  <%= @ripple_address.uid %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @ripple_address.data %>
+</p>
+
+<%= link_to 'Edit', edit_ripple_address_path(@ripple_address) %> |
+<%= link_to 'Back', ripple_addresses_path %>

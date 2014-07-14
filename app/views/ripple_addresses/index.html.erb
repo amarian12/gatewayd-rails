@@ -1,0 +1,35 @@
+<h1>Listing ripple_addresses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Managed</th>
+      <th>Address</th>
+      <th>Type</th>
+      <th>Tag</th>
+      <th>Uid</th>
+      <th>Data</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ripple_addresses.each do |ripple_address| %>
+      <tr>
+        <td><%= ripple_address.managed %></td>
+        <td><%= ripple_address.address %></td>
+        <td><%= ripple_address.type %></td>
+        <td><%= ripple_address.tag %></td>
+        <td><%= ripple_address.uid %></td>
+        <td><%= ripple_address.data %></td>
+        <td><%= link_to 'Show', ripple_address %></td>
+        <td><%= link_to 'Edit', edit_ripple_address_path(ripple_address) %></td>
+        <td><%= link_to 'Destroy', ripple_address, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ripple address', new_ripple_address_path %>

@@ -1,0 +1,41 @@
+<%= form_for(@ripple_address) do |f| %>
+  <% if @ripple_address.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ripple_address.errors.count, "error") %> prohibited this ripple_address from being saved:</h2>
+
+      <ul>
+      <% @ripple_address.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :managed %><br>
+    <%= f.check_box :managed %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :tag %><br>
+    <%= f.number_field :tag %>
+  </div>
+  <div class="field">
+    <%= f.label :uid %><br>
+    <%= f.text_field :uid %>
+  </div>
+  <div class="field">
+    <%= f.label :data %><br>
+    <%= f.text_area :data %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

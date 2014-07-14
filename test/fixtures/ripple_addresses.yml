@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  managed: false
+  address: MyString
+  type: 
+  tag: 1
+  uid: MyString
+  data: MyText
+
+two:
+  managed: false
+  address: MyString
+  type: 
+  tag: 1
+  uid: MyString
+  data: MyText

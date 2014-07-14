@@ -1,0 +1,69 @@
+<%= form_for(@ripple_transaction) do |f| %>
+  <% if @ripple_transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ripple_transaction.errors.count, "error") %> prohibited this ripple_transaction from being saved:</h2>
+
+      <ul>
+      <% @ripple_transaction.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :to_address %><br>
+    <%= f.text_field :to_address %>
+  </div>
+  <div class="field">
+    <%= f.label :from_address %><br>
+    <%= f.text_field :from_address %>
+  </div>
+  <div class="field">
+    <%= f.label :to_amount %><br>
+    <%= f.text_field :to_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :from_amount %><br>
+    <%= f.text_field :from_amount %>
+  </div>
+  <div class="field">
+    <%= f.label :to_currency %><br>
+    <%= f.text_field :to_currency %>
+  </div>
+  <div class="field">
+    <%= f.label :from_currency %><br>
+    <%= f.text_field :from_currency %>
+  </div>
+  <div class="field">
+    <%= f.label :to_issuer %><br>
+    <%= f.text_field :to_issuer %>
+  </div>
+  <div class="field">
+    <%= f.label :from_issuer %><br>
+    <%= f.text_field :from_issuer %>
+  </div>
+  <div class="field">
+    <%= f.label :transaction_state %><br>
+    <%= f.text_field :transaction_state %>
+  </div>
+  <div class="field">
+    <%= f.label :transaction_hash %><br>
+    <%= f.text_field :transaction_hash %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :uid %><br>
+    <%= f.text_field :uid %>
+  </div>
+  <div class="field">
+    <%= f.label :data %><br>
+    <%= f.text_area :data %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
